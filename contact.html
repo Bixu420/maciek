@@ -1,0 +1,22 @@
+ <main>
+    <h1>Kontakt</h1>
+    <p> instagram  :chludzinskimaciej.pv.</p>
+    <p> facebook: chludzinski maciej</p>
+  </main>
+    </main>
+    <script>
+    // Aktualizowanie i wyświetlanie daty i godziny
+    function aktualizujDateGodzine() {
+      var dataGodzina = new Date();
+      var data = dataGodzina.toLocaleDateString();
+      var godzina = dataGodzina.toLocaleTimeString();
+
+      var elementData = document.getElementById('aktualna-data');
+      var elementGodzina = document.getElementById('aktualna-godzina');
+
+      elementData.textContent = 'Aktualna data: ' + data;
+      elementGodzina.textContent = 'Aktualna godzina: ' + godzina;
+    }
+
+    setInterval(aktualizujDateGodzine, 1000); // Odświeżanie co sekundę
+  </script>

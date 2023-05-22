@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Moja witryna</title>
+  <style>
+    /* CSS dla nawigacji */
+    nav {
+      background-color: #333;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+
+    /* CSS dla zawartości strony */
+    main {
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Nawigacja -->
+  <nav>
+    <a href="index.html">Strona główna</a>
+    <a href="about.html">O mnie</a>
+    <a href="contact.html">Kontakt</a>
+  </nav>
+
+  <!-- Strona główna -->
+  <main>
+    <h1>Witaj na mojej stronie!</h1>
+    <p>Nie wiedziałem że zbudzam takie zainterresowanie. Jeżeli kochasz mma lub  tak jak ja to wejdź strefę kontakt abyśmy mogli się umówić!!</p>
+  <p id="aktualna-data">Aktualna data: </p>
+    <p id="aktualna-godzina">Aktualna godzina: </p>
+  </main>
+
+  <!-- O mnie -->
+  <main>
+    <h1>O mnie</h1>
+    <p>Ten sexy po prawej to ja.</p>
+    <img src="sexy.jpeg" alt="ten seksiak po lewej to ja">
+    <p>Uwielbiam mma i tenisa i stworzylem ta strone aby mozna bylo sie ze mna umowic na sparingi</p>
+  </main>
+
+  <!-- Kontakt -->
+  <main>
+    <h1>Kontakt</h1>
+    <p> instagram  :chludzinskimaciej.pv.</p>
+    <p> facebook: chludzinski maciej</p>
+  </main>
+  <script>
+    // Aktualizowanie i wyświetlanie daty i godziny
+    function aktualizujDateGodzine() {
+      var dataGodzina = new Date();
+      var data = dataGodzina.toLocaleDateString();
+      var godzina = dataGodzina.toLocaleTimeString();
+
+      var elementData = document.getElementById('aktualna-data');
+      var elementGodzina = document.getElementById('aktualna-godzina');
+
+      elementData.textContent = 'Aktualna data: ' + data;
+      elementGodzina.textContent = 'Aktualna godzina: ' + godzina;
+    }
+
+    setInterval(aktualizujDateGodzine, 1000); // Odświeżanie co sekundę
+  </script>
+  
+</body>
+</html>
